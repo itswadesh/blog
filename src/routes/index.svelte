@@ -30,7 +30,7 @@
   function changePage(e, p) {
     let fl = { ...query };
     delete fl.page;
-    const url = constructURL2("/blog", fl);
+    const url = constructURL2("/", fl);
     let page = parseInt(e.detail || 1);
     goto(`${url}page=${page}`);
   }
@@ -49,6 +49,7 @@
       {#each posts.data as post}
         <BlogPostGrid {post} />
       {/each}
+      {noOfPages}
       <Pagination
         count={noOfPages}
         current={parseInt(query.page || 1)}
