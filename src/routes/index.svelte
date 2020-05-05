@@ -49,7 +49,6 @@
       {#each posts.data as post}
         <BlogPostGrid {post} />
       {/each}
-      {noOfPages}
       <Pagination
         count={noOfPages}
         current={parseInt(query.page || 1)}
