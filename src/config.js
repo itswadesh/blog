@@ -12,7 +12,7 @@ const CDN = 'https://ik.imagekit.io/3wzatecz51w3i/litekart'
 export const typingTimeout = 0 // After this delay the search api will be fired
 const currency = { symbol: '$', code: 'USD' }
 const tokenExpiry = 60 * 60 * 24 * 365 // Login validity in seconds
-const ANALYTICS_TRACKING_ID = 'UA-49421899-6'
+const ANALYTICS_TRACKING_ID = 'UA-49421899-10'
 const sorts = [
   { name: 'Relevance', val: null },
   { name: 'Whats New', val: '-published_at' },
