@@ -11,17 +11,17 @@
 
 > Solution to the above issue is to use a CDN.
 
-## Google Lighthouse/Pagespeed Audit Score (Search Page)
+## Google Lighthouse/Pagespeed Audit Score (Home Page)
 
-  <img use:lazyload  src="https://github.com/itswadesh/blog/blob/master/static/light-house-search.jpg?raw=true" alt />
+  <img use:lazyload  src="https://github.com/itswadesh/blog/blob/master/static/light-house.jpg?raw=true" alt />
   
-  ## Google Lighthouse/Pagespeed Audit Score (Detail Page)
+  ## Google Lighthouse/Pagespeed Audit Score (Post Page)
   <img use:lazyload  src="https://github.com/itswadesh/blog/blob/master/static/light-house-detail.jpg?raw=true" alt />
 
 # What is 2lessons?
 
-- 2lessons.info is a news website that focus on latest ecommerce news.
-- Using now.sh for serverless api interface
+- 2lessons.info is an ecommerce news website created using this blog template.
+- Uses now.sh for serverless api interface
 
 # Installation
 
@@ -41,6 +41,6 @@ Open http://localhost:4000 on chrome. Your app should be live
 # Deployment
 
 ```
-npm i -g now
+npm i -g now-cli
 now
 ```
