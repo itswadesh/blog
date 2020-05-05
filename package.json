@@ -23,6 +23,7 @@
   "dependencies": {
     "cookie-universal": "^2.1.0",
     "http-proxy-middleware": "^1.0.3",
+    "dotenv": "^8.2.0",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
@@ -30,7 +31,6 @@
     "polka": "next",
     "@fullhuman/postcss-purgecss": "^2.0.5",
     "compression": "^1.7.1",
-    "dotenv": "^8.2.0",
     "fa-svelte": "^3.1.0",
     "siema": "^1.5.1",
     "sirv": "^0.4.0",
