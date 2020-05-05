@@ -28,7 +28,7 @@ async function send({ method, path, data, token, cookie }) {
     opts.headers['Authorization'] = `Bearer ${tkn}`
   }
   try {
-    let response = await fetch(`${host}/api/${path}`, opts)
+    let response = await fetch(`${api_url}/api/${path}`, opts)
     let json = await response.text()
     if (!response.ok) {
       throw json
