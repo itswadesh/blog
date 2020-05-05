@@ -1,0 +1,63 @@
+{
+  "name": "lessons",
+  "description": "Responsive blog layout using Sapper, Svelte, TailwindCSS, Rollup",
+  "version": "1.1.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "run-p watch:tailwind sapper:dev",
+    "sapper:dev": "sapper dev --port 4000",
+    "build": "NODE_ENV=production run-p build:tailwind buildY",
+    "buildY": "ls && sapper build",
+    "deploy:test": "now -A now.test.json",
+    "export": "sapper export --legacy",
+    "start": "NODE_ENV=production node __sapper__/build",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run",
+    "watch:tailwind": "postcss static/tailwind.css -o static/index.css -w",
+    "build:tailwind": "cross-env NODE_ENV=production postcss static/tailwind.css -o static/index.css"
+  },
+  "engines": {
+    "node": ">=11.x"
+  },
+  "dependencies": {
+    "@beyonk/svelte-carousel": "^2.1.1",
+    "@fortawesome/free-regular-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fullhuman/postcss-purgecss": "^2.0.5",
+    "compression": "^1.7.1",
+    "cookie-universal": "^2.1.0",
+    "cross-env": "^6.0.3",
+    "dotenv": "^8.2.0",
+    "fa-svelte": "^3.1.0",
+    "http-proxy-middleware": "^1.0.3",
+    "node-fetch": "^2.6.0",
+    "polka": "next",
+    "siema": "^1.5.1",
+    "sirv": "^0.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/runtime": "^7.8.3",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0",
+    "rollup": "^1.29.1",
+    "rollup-plugin-babel": "^4.0.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-svelte": "^5.0.1",
+    "rollup-plugin-terser": "^5.2.0",
+    "sapper": "^0.27.0",
+    "shelljs": "^0.8.3",
+    "ssh2shell": "^1.9.3",
+    "svelte": "^3.17.3",
+    "svelte-awesome": "^2.2.1",
+    "svelte-preprocess": "^3.7.4",
+    "tailwindcss": "^1.1.4"
+  }
+}

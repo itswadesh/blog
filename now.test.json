@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "test-v2-lessons",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "github:beyonk-adventures/now-sapper"
+    }
+  ],
+  "regions": ["lhr"]
+}
