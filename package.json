@@ -56,5 +56,10 @@
     "svelte-awesome": "^2.2.1",
     "svelte-preprocess": "^3.7.4",
     "tailwindcss": "^1.1.4"
+  },
+  "bit": {
+    "env": {},
+    "componentsDefaultDirectory": "src/components/{name}",
+    "packageManager": "yarn"
   }
 }

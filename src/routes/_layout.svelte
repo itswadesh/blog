@@ -1,12 +1,20 @@
 <script>
-  import Header from "./../components/Header.svelte";
+  import { stores } from "@sapper/app";
+  import Nav from "./../components/Nav.svelte";
   import Footer from "./../components/Footer.svelte";
+  import PreloadingIndicator from "./../components/ui/PreloadingIndicator.svelte";
   export let segment;
+  const { preloading } = stores();
 </script>
 
-<Header {segment} />
-<div style="min-height:71.8vh" class="antialiased ">
-  <slot />
+{#if $preloading}
+  <PreloadingIndicator />
+{/if}
+<div class="min-h-screen antialiased flex flex-col ">
+  <Nav {segment} />
+  <div class="mt-12 flex-1">
+    <slot />
+  </div>
 </div>
 
 <Footer />

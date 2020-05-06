@@ -2,7 +2,7 @@
   import { get } from "./../lib/api";
   import { fadeIn, fadeOut } from "./../actions/pageFade";
   import { send, receive } from "./../actions/crossfade";
-  import Pagination from "./../components/Pagination.svelte";
+  import Pagination from "./../components/ui/Pagination.svelte";
   export async function preload({ params, query }) {
     let posts = [],
       err = null,
@@ -49,7 +49,6 @@
       {#each posts.data as post}
         <BlogPostGrid {post} />
       {/each}
-      {noOfPages}
       <Pagination
         count={noOfPages}
         current={parseInt(query.page || 1)}
