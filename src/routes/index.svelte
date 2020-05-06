@@ -1,38 +1,38 @@
 <script context="module">
-  import { get } from "./../lib/api";
-  import { fadeIn, fadeOut } from "./../actions/pageFade";
-  import { send, receive } from "./../actions/crossfade";
-  import Pagination from "./../components/ui/Pagination.svelte";
+  import { get } from './../lib/api'
+  import { fadeIn, fadeOut } from './../actions/pageFade'
+  import { send, receive } from './../actions/crossfade'
+  import Pagination from './../components/ui/Pagination.svelte'
   export async function preload({ params, query }) {
     let posts = [],
       err = null,
-      loading = false;
+      loading = false
     try {
-      loading = true;
-      let res = await get(`lessons?page=${query.page || 1}`);
-      if (!res.data) this.error(500, "Post not found.");
-      return { posts: res, query };
+      loading = true
+      let res = await get(`lessons?page=${query.page || 1}`)
+      if (!res.data) this.error(500, 'Post not found.')
+      return { posts: res, query }
     } catch (e) {
-      this.error(500, e.toString());
+      this.error(500, e.toString())
     } finally {
-      loading = false;
+      loading = false
     }
   }
 </script>
 
 <script>
-  import { goto, stores } from "@sapper/app";
-  const { preloading, page, session } = stores();
-  import BlogPostGrid from "./_BlogPostGrid.svelte";
-  import { constructQry, constructURL2 } from "./../lib";
-  export let posts, query;
-  $: noOfPages = Math.ceil(posts.count / posts.pageSize);
+  import { goto, stores } from '@sapper/app'
+  const { preloading, page, session } = stores()
+  import BlogPostGrid from './_BlogPostGrid.svelte'
+  import { constructQry, constructURL2 } from './../lib'
+  export let posts, query
+  $: noOfPages = Math.ceil(posts.count / posts.pageSize)
   function changePage(e, p) {
-    let fl = { ...query };
-    delete fl.page;
-    const url = constructURL2("/", fl);
-    let page = parseInt(e.detail || 1);
-    goto(`${url}page=${page}`);
+    let fl = { ...query }
+    delete fl.page
+    const url = constructURL2('/', fl)
+    let page = parseInt(e.detail || 1)
+    goto(`${url}page=${page}`)
   }
 </script>
 

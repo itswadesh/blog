@@ -1,51 +1,51 @@
 <script context="module">
-  import { get } from "./../lib/api";
-  import { date } from "./../lib";
-  import { lazyload } from "./../actions/lazyload";
-  import { fadeIn, fadeOut } from "./../actions/pageFade";
-  import { send, receive } from "./../actions/crossfade";
-  import { CDN } from "./../config";
+  import { get } from './../lib/api'
+  import { date } from './../lib'
+  import { lazyload } from './../actions/lazyload'
+  import { fadeIn, fadeOut } from './../actions/pageFade'
+  import { send, receive } from './../actions/crossfade'
+  import { CDN } from './../config'
 
   export async function preload({ params }) {
     let post = {},
       err = null,
-      loading = false;
+      loading = false
     try {
-      loading = true;
-      post = await get(`lessons/one.ts?slug=${params.slug}`);
-      if (!post) this.error(500, "Post not found.");
-      return { post };
+      loading = true
+      post = await get(`lessons/one.ts?slug=${params.slug}`)
+      if (!post) this.error(500, 'Post not found.')
+      return { post }
     } catch (e) {
-      this.error(500, e.toString());
+      this.error(500, e.toString())
     } finally {
-      loading = false;
+      loading = false
     }
   }
 </script>
 
 <script>
-  import { stores } from "@sapper/app";
-  const { session } = stores();
-  export let post;
+  import { stores } from '@sapper/app'
+  const { session } = stores()
+  export let post
   let latestPosts = [],
-    loading = false;
+    loading = false
   async function getLatestPosts() {
     try {
-      loading = true;
-      const res = await get("lessons");
-      latestPosts = res.data;
-      return latestPosts;
+      loading = true
+      const res = await get('lessons')
+      latestPosts = res.data
+      return latestPosts
     } catch (e) {
-      console.log("Err:: blog detail page... ", e);
-      return [];
+      console.log('Err:: blog detail page... ', e)
+      return []
     } finally {
-      loading = false;
+      loading = false
     }
   }
   // getLatestPosts();
-  function generateUrl(name, url, demo = "") {
-    let firstWord = name.split(" ")[0];
-    return "/blog/go/" + firstWord.toLowerCase() + demo + "?url=" + url; // encodeURIComponent(url)
+  function generateUrl(name, url, demo = '') {
+    let firstWord = name.split(' ')[0]
+    return '/blog/go/' + firstWord.toLowerCase() + demo + '?url=' + url // encodeURIComponent(url)
   }
 </script>
 

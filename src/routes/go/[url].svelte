@@ -1,15 +1,15 @@
 <script context="module">
-  import { goto } from "@sapper/app";
-  let url;
+  import { goto } from '@sapper/app'
+  let url
   export function preload({ query }) {
-    url = query.url;
+    url = query.url
     // window.location.href(query.url);
   }
 </script>
 
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte'
   onMount(async () => {
-    goto(url);
-  });
+    goto(url)
+  })
 </script>
