@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "regions": ["bom1", "sin1"],
   "builds": [
     {
       "src": "package.json",
