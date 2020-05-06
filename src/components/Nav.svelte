@@ -4,6 +4,7 @@
   import { slide, fade } from "svelte/transition";
   import { lazyload } from "../actions/lazyload";
   import { CDN } from "./../config";
+  export let y;
 </script>
 
 <style>
@@ -15,13 +16,13 @@
   }
 </style>
 
+<svelte:window bind:scrollY={y} />
 <div
-  class="mb-8 sticky flex shadow-lg justify-around items-center px-6 py-3
-  bg-white">
+  class={y > 50 ? 'mb-8 flex justify-around items-center py-1 fixed w-full z-10 bg-white lg:opacity-75 shadow-lg blur' : 'mb-8 flex justify-around items-center py-1 fixed w-full z-10 bg-white'}>
   <a
     href="/"
     rel="prefetch"
-    class=" flex items-center text-4xl font-bold text-gray-800">
+    class="flex items-center text-4xl font-bold text-gray-800">
     <img src={`/logo.png`} alt="" class="h-10" />
     2lessons
   </a>

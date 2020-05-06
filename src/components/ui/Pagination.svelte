@@ -1,10 +1,10 @@
 <script>
-  import { createEventDispatcher } from 'svelte'
-  const dispatch = createEventDispatcher()
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
   export let count = 10,
-    current = 1
-  count = parseInt(count)
-  $: pages = count > 10 ? 10 : count
+    current = 1;
+  count = parseInt(count);
+  $: pages = count > 10 ? 10 : count;
 </script>
 
 <style>
@@ -16,7 +16,7 @@
 
 {#if count > 1}
   <div class="mx-6 flex flex-col md:flex-row justify-between items-center">
-    <div class="text-gray-500 items-center">Page {current} of {count}</div>
+    <div class="text-gray-800 items-center">Page {current} of {count}</div>
     <div class="flex-1 flex items-center text-center justify-between w-full">
       {#if current > 1}
         <button

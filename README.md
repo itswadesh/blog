@@ -5,6 +5,10 @@
 
 # e-commerce blogging template
 
+|                                                                                                  |                                                                                                      |     |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | --- |
+| ![Home Page](https://github.com/itswadesh/blog/blob/master/static/screenshots/home.png?raw=true) | ![Detail Page](https://github.com/itswadesh/blog/blob/master/static/screenshots/detail.png?raw=true) |     |  |
+
 # Built for speed
 
 > Following are the test results when all servers (Node, Static Server, Client) give a ping response <100 ms. The demo app 2lessons.info is hosted at Mumbai (India), If you are testing from another country, the results my vary.
@@ -13,10 +17,10 @@
 
 ## Google Lighthouse/Pagespeed Audit Score (Home Page)
 
-  <img use:lazyload  src="https://github.com/itswadesh/blog/blob/master/static/light-house.jpg?raw=true" alt />
+  <img src="https://github.com/itswadesh/blog/blob/master/static/screenshots/home.jpg?raw=true" alt />
   
   ## Google Lighthouse/Pagespeed Audit Score (Post Page)
-  <img use:lazyload  src="https://github.com/itswadesh/blog/blob/master/static/light-house-detail.jpg?raw=true" alt />
+  <img src="https://github.com/itswadesh/blog/blob/master/static/screenshots/detail.jpg?raw=true" alt />
 
 # What is 2lessons?
 
