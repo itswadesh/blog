@@ -1,10 +1,10 @@
 <script>
-  import { createEventDispatcher } from "svelte";
-  const dispatch = createEventDispatcher();
+  import { createEventDispatcher } from 'svelte'
+  const dispatch = createEventDispatcher()
   export let count = 10,
-    current = 1;
-  count = parseInt(count);
-  $: pages = count > 10 ? 10 : count;
+    current = 1
+  count = parseInt(count)
+  $: pages = count > 10 ? 10 : count
 </script>
 
 <style>

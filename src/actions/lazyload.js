@@ -4,7 +4,7 @@ export function lazyload(node) {
     rootMargin: '0px',
     threshold: 0.9,
   }
-  let fetchImage = url => {
+  let fetchImage = (url) => {
     return new Promise((resolve, reject) => {
       let image = new Image()
       image.src = url
@@ -12,14 +12,14 @@ export function lazyload(node) {
       image.onerror = reject
     })
   }
-  let loadImage = image => {
+  let loadImage = (image) => {
     let src = image.dataset.src
     fetchImage(src).then(() => {
       image.src = src
     })
   }
   let handleIntersection = (entries, observer) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         loadImage(entry.target)
       }

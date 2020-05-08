@@ -1,10 +1,10 @@
 <script>
-  import Icon from "svelte-awesome";
-  import { bars, phone } from "svelte-awesome/icons";
-  import { slide, fade } from "svelte/transition";
-  import { lazyload } from "../actions/lazyload";
-  import { CDN } from "./../config";
-  export let y;
+  import Icon from 'svelte-awesome'
+  import { bars, phone } from 'svelte-awesome/icons'
+  import { slide, fade } from 'svelte/transition'
+  import { lazyload } from '../actions/lazyload'
+  import { CDN } from './../config'
+  export let y
 </script>
 
 <style>

@@ -1,8 +1,8 @@
 <script>
-  import { lazyload } from "../actions/lazyload";
-  import { currency, truncate, date } from "./../lib";
-  import { CDN } from "./../config";
-  export let post = {};
+  import { lazyload } from '../actions/lazyload'
+  import { currency, truncate, date } from './../lib'
+  import { CDN } from './../config'
+  export let post = {}
 </script>
 
 <style>
