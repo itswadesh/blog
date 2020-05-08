@@ -6,7 +6,7 @@
   "author": "Swadesh Behera <swadesh@litekart.in>",
   "scripts": {
     "dev": "run-p watch:tailwind sapper:dev",
-    "sapper:dev": "sapper dev --port 4000",
+    "sapper:dev": "sapper dev --port 4040",
     "build": "cross-env NODE_ENV=production run-p build:tailwind buildY",
     "buildY": "ls && sapper build",
     "deploy:test": "now -A now.test.json",
