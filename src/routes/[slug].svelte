@@ -12,7 +12,7 @@
       loading = false
     try {
       loading = true
-      post = await get(`lessons/one.ts?slug=${params.slug}`)
+      post = await get(`lessons/${params.slug}`)
       if (!post) this.error(500, 'Post not found.')
       return { post }
     } catch (e) {
