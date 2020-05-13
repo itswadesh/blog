@@ -1,7 +1,8 @@
 // process.env.api_url comes from rollup.config.js line 30,31
 const server_ip = 'https://automation.litekart.in'
 const www_ip = 'https://www.2lessons.info'
-const sitemap_url = 'http://misiki.s3-website-eu-west-1.amazonaws.com/images'
+// const sitemap_url = 'http://misiki.s3-website-eu-west-1.amazonaws.com/images'
+const sitemap_url = 'https://automation.litekart.in'
 const api_url =
   process.env.NODE_ENV === 'production'
     ? server_ip
