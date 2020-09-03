@@ -57,7 +57,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
     "prettier": "^2.0.5",
-    "sapper": "^0.27.0",
+    "sapper": "^0.27.11",
     "shelljs": "^0.8.3",
     "ssh2shell": "^1.9.3",
     "svelte": "^3.17.3",
